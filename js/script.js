@@ -222,6 +222,14 @@ $(document).ready(function(){
 			$(this).toggleClass('_active')
 		}
 	})
+	function inputColor() {
+		if($(this).val().length > 0) {
+			$(this).addClass('_active')
+		} else {
+			$(this).removeClass('_active')
+		}
+	}
+	$('.contacts__input').find('input').keydown(inputColor)
 	$('.price__row').slick({
 		infinite: false,
 		slidesToShow: 3,
