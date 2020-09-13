@@ -214,6 +214,14 @@ $(document).ready(function(){
 		$('.menu-header__body').removeClass('_active')
 		$('body').removeClass('_lock')
 	})
+	$('.tabs-companies__item').click(function(){
+		$.each($('.tabs-companies__item'), function(){
+			$('.tabs-companies__item').removeClass('_active')
+		});
+		if (!$(this).hasClass('_active')) {
+			$(this).toggleClass('_active')
+		}
+	})
 	$('.price__row').slick({
 		infinite: false,
 		slidesToShow: 3,
